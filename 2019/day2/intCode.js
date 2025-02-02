@@ -17,7 +17,8 @@ const runIntCode = (code) => {
   return code;
 };
 
-// console.log(runIntCode(program));
+console.log(runIntCode(program));
+
 const nounAndVerb = () => {
   let noun = 0;
 
@@ -30,25 +31,3 @@ const nounAndVerb = () => {
 };
 
 console.log(nounAndVerb());
-
-// console.log(program.length);
-// console.log(index, "current index");
-// console.log(code[index], "index of data", code[code[index]], "data");
-// console.log(
-//   code[index + 1],
-//   "index of data",
-//   code[code[index + 1]],
-//   "data"
-// );
-// console.log(
-//   code[index + 2],
-//   "index of data",
-//   code[code[index + 2]],
-//   "data"
-// );
-// console.log(
-//   code[index + 3],
-//   "index of data",
-//   code[code[index + 3]],
-//   "data"
-// );
