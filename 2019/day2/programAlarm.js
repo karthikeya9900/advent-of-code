@@ -1,3 +1,5 @@
+import { program } from "./input.js";
+
 const runIntCode = (code) => {
   let index = 0;
 
@@ -17,17 +19,21 @@ const runIntCode = (code) => {
   return code;
 };
 
-console.log(runIntCode(program));
+// console.log(runIntCode(program));
 
-const nounAndVerb = () => {
-  let noun = 0;
+const findNounAndVerb = (target) => {
+  for (let noun = 0; noun < 100; noun++) {
+    for (let verb = 0; verb < 100; verb++) {
+      const newProgramm = [...program];
+      newProgramm[1] = noun;
+      newProgramm[2] = verb;
 
-  while (noun < 100) {
-    if (100 * noun === 196907) {
-      return [noun, verb];
+      const result = runIntCode(newProgramm);
+      if (result[0] === target) {
+        return result;
+      }
     }
-    noun++;
   }
 };
 
-console.log(nounAndVerb());
+console.log(findNounAndVerb(19690720));
